@@ -1,0 +1,371 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Estilo do Cabeçalho */
+
+/* Centralizar a logo no topo do cabeçalho */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px 20px; /* Espaçamento inferior para evitar sobreposição com o conteúdo abaixo */
+    margin: 0 auto;
+    margin-top: -100px; /* Espaço acima do cabeçalho */
+    max-width: 1200px;/*Largura*/
+    border-radius: 8px; /* Opcional: arredonda os cantos do cabeçalho */
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna para incluir a logo no topo */
+    align-items: center; /* Centraliza a logo horizontalmente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+  
+.logo-container {
+    text-align: center;
+    margin-top: 10px; /*altura*/
+    margin-bottom: 10px; /* Espaçamento entre a logo e o menu de navegação */
+}
+
+.logo {
+   
+    max-width: 500px; /* Tamanho máximo da logo */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top:-130px; /*ajustar a altura da log*/
+}
+/* Estilo para a logo em telas grandes */
+.logo {
+  max-width: 500px; /* Tamanho máximo da logo */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-top: -130px; /*ajustar a altura da logo*/
+}
+
+/* Estilo para telas médias (tablets, por exemplo) */
+@media (max-width: 768px) {
+  .logo {
+      max-width: 400px; /* Ajusta o tamanho da logo */
+      margin-top: -100px; /* Ajusta a altura da logo */
+  }
+}
+
+/* Estilo para telas pequenas (celulares, por exemplo) */
+@media (max-width: 480px) {
+  .logo {
+      max-width: 300px; /* Ajusta o tamanho da logo */
+      margin-top: -80px; /* Ajusta a altura da logo */
+  }
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:20px; /*aumenta fonte*/
+    transition: color 0.3s;
+    
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/*Area da introdução*/
+/* Estilo geral para o início */
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 20px; /* Espaçamento entre imagem e texto */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+  }
+  
+  /* Estilo para o texto */
+  .inicio-texto {
+    flex: 1;
+    max-width: 600px; /* Limita a largura do texto */
+    font-family: 'Arial', sans-serif;
+    text-align: justify; /* Justifica o texto */
+  }
+  
+  .inicio-texto h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .inicio-texto p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Estilo para a imagem */
+.inicio-imagem img {
+  max-width: 100%; /* A imagem ocupa toda a largura disponível */
+  height: auto;
+  max-width: 600px; /* Limita o tamanho máximo da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Responsividade para telas médias (tablets) */
+@media (max-width: 768px) {
+  .inicio {
+      flex-direction: column; /* Empilha imagem e texto em telas menores */
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .inicio-texto {
+      max-width: 90%; /* Ajusta o texto para caber melhor em telas menores */
+      margin: 0 auto; /* Centraliza o texto */
+  }
+
+  .inicio-imagem img {
+      max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+  }
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 480px) {
+  .inicio-texto {
+      font-size: 16px; /* Reduz o tamanho da fonte para caber melhor */
+      padding: 10px; /* Adiciona espaçamento interno para facilitar a leitura */
+  }
+
+  .inicio-imagem img {
+      max-width: 90%; /* Reduz a largura da imagem para caber com margens */
+      margin: 0 auto; /* Centraliza a imagem */
+  }
+}
+  
+/*fim da introdução*/
+
+/*inicio dos container*/
+.news {
+  display: flex; /* Empilha ou alinha os itens dependendo da direção */
+  flex-direction: column; /* Empilha os itens verticalmente */
+  gap: 20px; /* Espaçamento entre os contêineres */
+  max-width: 1250px; /* Largura máxima para o contêiner de notícias */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+  padding: 0 20px; /* Adiciona espaçamento lateral interno */
+  margin-top: 40px; /* Espaço entre o menu e o conteúdo principal */
+}
+
+.news-item {
+  display: flex; /* Ativa o Flexbox para o contêiner */
+  flex-direction: row; /* Alinha os itens em uma linha (imagem e texto lado a lado) */
+  align-items: center; /* Centraliza o texto verticalmente em relação à imagem */
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Espaçamento interno */
+}
+
+.news-item img {
+  width: 150px; /* Define a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Ajusta a imagem sem distorção */
+  margin-right: 20px; /* Espaço entre a imagem e o texto */
+  flex-shrink: 0; /* Evita que a imagem seja redimensionada */
+}
+
+.news-item h3, .news-item p {
+  margin: 0;
+}
+
+.news-item-content {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.news-item h4 {
+  background: #881b0d;
+  color: white;
+  padding: 10px;
+  border-radius: 5px 5px 0 0; /* Opcional: ajusta o estilo do título */
+  text-align: center; /* Justifica o texto da descrição */
+  margin: 0; /* Remove margens extras, se necessário */
+}
+
+.news-item p {
+  padding: 10px 0;
+  text-align: justify; /* Justifica o texto da descrição */
+  margin: 10px; /* Remove margens extras, se necessário */
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/*fim dos container*/
+
+  /*carrosel*/
+
+  /* Estilo para o título acima do carrossel */
+.carousel-title {
+  text-align: center;
+  margin-bottom: 20px; /* Ajuste o espaço entre o título e o carrossel */
+}
+
+.carousel-title h2 {
+  font-size: 2rem; /* Tamanho do título */
+  font-weight: bold;
+  color: #333; /* Cor do título */
+  margin: 0;
+}
+
+  /* Estilo do Carrossel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden; /* Esconde os elementos fora do carrossel */
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Transição suave */
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative; /* Necessário para o título flutuar sobre a imagem */
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 30px; /* Ajuste a posição do título para não ficar colado na base */
+  left: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o título */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-text h2 {
+  font-size: 2rem; /* Tamanho do título */
+  margin: 0;
+}
+
+.carousel-text p {
+  font-size: 1rem; /* Tamanho do texto do parágrafo */
+}
+
+/* Estilo para as bolinhas de navegação */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: rgb(0, 0, 0);
+}
+
+/* Rodapé */
+footer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que o conteúdo quebre linha em telas pequenas */
+  justify-content: space-between; /* Espaça os itens entre si */
+  padding: 20px;
+  background-color: #fafafa;
+  color: rgb(5, 0, 0);
+  z-index: 1000; /* Garante que o rodapé fique acima de outros elementos */
+  font-family: 'Arial', sans-serif; /* Define a fonte para o rodapé */
+font-size: 0.9rem; /* Tamanho padrão da fonte */
+}
+
+.footer-contact {
+  font-family: 'Verdana', sans-serif; /* Fonte específica para a área de contato */
+  font-size: 1.1rem; /* Tamanho maior para o texto de contato */
+  flex: 1; /* Flexível, ocupa a área disponível */
+  max-width: 70%; /* Define um tamanho máximo para a área de contato */
+}
+
+.footer-contact h3 {
+  margin-top: 0;
+}
+
+.footer-contact p {
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: Flex-end; /* Alinha à direita */
+  justify-content: flex-start;
+  flex: 1;
+  max-width: 50%; /* Define um tamanho máximo para a área de logos */
+}
+
+.footer-logo img {
+  max-width: 200px; /* Limita o tamanho das logos */
+  margin: 5px 0;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  text-align: right; /* Alinha o texto à direita */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Empilha os itens em telas pequenas */
+    align-items: center;
+  }
+
+  .footer-contact, .footer-logo {
+    max-width: 100%; /* Faz com que as áreas ocupem 100% da largura */
+    text-align: center; /* Alinha o conteúdo ao centro */
+  }
+
+  .footer-logo {
+    align-items: center;
+  }
+
+/*conteiner do site noticias*/
+
+
+
+
+}
